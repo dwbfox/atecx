@@ -1,4 +1,0 @@
-atecx
-=====
-
-ATEC Experimental
