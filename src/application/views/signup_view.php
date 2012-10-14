@@ -1,4 +1,4 @@
-<div id="content" class="container">
+<div id="content">
 	<div class="content">
 		<div class="avatar">
 			<?php echo '<img src="' . twitter_profile_image($_SESSION['screen_name'],'normal') .'" alt="avatar"/>'; ?>
@@ -25,7 +25,7 @@
 					  <input class="span2" id="appendedInput" size="16" type="text" required=""><span class="add-on">@utdallas.edu</span>
 					</div>
 					<label>Tell us about yourself</label>
-					<textarea disabled=""><?php echo $_SESSION['bio']; ?></textarea>
+					<textarea><?php echo $_SESSION['bio']; ?></textarea>
 				</form>
 				<a href="#" id="step1_submit" class="btn btn-primary btn-success btn-large row offset2">Next</a>
 			</div> <!-- STEP1  -->
@@ -67,7 +67,7 @@
 			<div id="step3" class="step-inner span6 offset4">
 				<h2>You're done!</h2>
 				<h3>What do you want to do next?</h3>
-				<a class="btn btn-primary btn-info">Go to your profile</a>
+				<a href="<?php echo 'profile/' . $_SESSION['screen_name']; ?>" class="btn btn-primary btn-info">Go to your profile</a>
 				<a class="btn btn-primary btn-info">Start a project</a>
 			</div>
 		</div> <!-- SIGNUP DIV -->

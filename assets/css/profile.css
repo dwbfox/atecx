@@ -1,0 +1,64 @@
+#sidebar {
+	min-width:150px;
+	padding-left: 31px;
+	border-left: 1px solid #ECECEC;
+	color: rgb(73, 54, 54);
+}
+
+#sidebar h2 {
+	color: white;
+	font-size: 9pt;
+	padding-left: 21px;
+	background: #444;
+}
+
+#main_window h2 {
+	font-size: 22px;
+	line-height: 40px;
+}
+
+
+
+#sidebar ul li {
+	clear: both;
+	display: block;
+	font-size: 8pt;
+}
+
+.info {
+	margin-bottom: 32px;
+}
+
+.info a  {
+	width: 128px;
+	margin: 3px;
+	float: left;
+}
+
+
+
+/* STAT * */
+
+#user_info {
+}
+
+.stat {
+	
+}
+
+.stat-title {
+    font-size: 45pt;
+	
+    padding-left: 0pt;
+}
+
+.stat-verb {
+    font-size: 14pt;
+	
+}
+#main_window {
+	
+}
+
+.avatar {
+	clear:both;

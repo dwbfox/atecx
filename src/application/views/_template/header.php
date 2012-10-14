@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title><?php echo isset($page_title) ? $page_title . ' - ATEC Experimental'  : 'ATEC Experimental'; ?></title>
+	<title><?php echo isset($page_title) ? $page_title . ' - ' . SITE_NAME  : SITE_NAME; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/css/ui-lightness/jquery-ui-1.8.23.custom.css">
@@ -23,27 +23,35 @@
 	    <div class="container">
 	    	<ul class="nav">
 	    		<li>
-		    		<a href="<?php echo base_url(); ?>" class="brand">ATEC <strong>Experimental</strong></a>
+		    		<a href="<?php echo base_url(); ?>" class="brand"><?php echo SITE_NAME; ?></a>
 		    	</li>
 		    	<li><a href="#">About</a></li>
 		    </ul>
 		    <form class="navbar-search pull-left">  
-	  			<input type="text" class="search-query" placeholder="Search ATEC Experimental">  
+	  			<input type="text" class="search-query" placeholder="<?php echo 'Search ' . SITE_NAME; ?>">  
 			</form>  
-		    <ul class="nav pull-right">
-		    	<li>
-		    		<?php
-		    		if (!is_logged_in()) {
-		    			// The user isn't logged. Generate a request URL and get them to sign in.
-		    			 echo anchor('login','Sign in or Sign Up');
-					} else {
-						// The user is logged in. We now get their username and display it.
-						$user = $_SESSION['screen_name'];
-						echo anchor('profile/' . $user,$user);
-					}
-					?>
-		    	</li>
+			<?php if (is_logged_in()): ?>
+			<div class="btn-group pull-right">
+			  <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#">
+			  	<?php echo $_SESSION['screen_name']; ?>
+			  	<span class="caret"></span>
+			  </a>
+			  <ul class="dropdown-menu">
+			    <?php 
+			   	 echo '<li>'. anchor('profile/' . $_SESSION['screen_name'],'Profile') .'</li>';
+		    	 echo '<li>'. anchor('signout','Sign out') .'</li>';
+			    ?>
+			  </ul>
+			</div>
+		    <?php else:?>
+			<ul class="nav nav-list pull-right">
+			<li><?php echo anchor('login','Sign in or Sign up!'); ?></li>
 			</ul>
+			<?php endif; ?>
+
+		   
+
+
 	    </div><!-- Nav container -->
 	  </div>
 	</div> 

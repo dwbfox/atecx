@@ -1,0 +1,69 @@
+#trending_projects {
+	min-height: 500px;
+	width: 100%;
+	background: #FFFFFF;
+}
+
+#signup_head {
+	margin: 0;
+	background: #111A22;
+	color: #FFFFFF;
+	text-shadow: 1px 2px 5px #000000;
+	padding: 18px;
+	line-height: 16px;
+	height: 173px;
+	border-top: 5px solid white;
+}
+	
+#signup_head h1 {
+	font-size: 38pt;
+	margin-bottom: 26px;
+	font-family: sans-serif;
+	color: #F5F5F5;
+}
+
+#signup_head p  {
+	font-size: 11pt;
+	width: 400px;
+
+}
+
+#signup_buttons a{
+	margin:0 auto;
+}
+
+.carousel {
+	border:none;
+	margin-bottom:0px;
+}
+
+
+.project-thumb img {
+	border-radius:5px;
+}
+
+#projects-inner {
+	padding-left:72px;
+}
+
+.project-thumb {
+	background: #FFFFFF;
+	border: 1px solid #D8C9C9;
+	width: 149px;
+	display:inline-block;
+	margin: 5px 84px 5px 0px;
+	box-shadow: 1px 2px 3px #CCC;
+	min-height:160px;
+}
+
+.project-thumb-inner, .thumbnail {
+}
+
+.project-thumb-description {
+	font-size:8pt;
+
+}
+
+.project-thumb-description span {
+	display:block;
+}

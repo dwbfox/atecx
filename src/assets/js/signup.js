@@ -67,10 +67,11 @@ $(function () {
         // Get the list of proficiencies
         var interests = getInterests();
         var email = $('#appendedInput').val();
-
+		var bio = $('textarea').val()
         // Prepare the final JSON to be sent to the server
         var userData = {
             "email": email,
+            "bio":bio,
             "interests": interests,
             "proficiencies": prof_list
         }

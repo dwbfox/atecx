@@ -1,15 +1,23 @@
 <?php
 
 
-
+/**
+ * Used in the login process
+ */
 define('CONSUMER','JqREbOjNdtCGcW2Pijzyyg');
 define('CONSUMER_SECRET','Jab8uPyIAXmyagwisrVFPFo6mHJaTjbyVOzzn3UwJg');
+define('SITE_NAME','ATEC Experimental');
+define('CALLBACK_URL','http://foxserv.us.to/atecx/callback');
+define('FORCE_AUTH',true); // Forces the user to reauthenticate with Twitter each time they log in
 
 
 
 
-
-
+/**
+ * Builds a valid URL to the assets url, where all the CSS, JS, and other 
+ * viewer related items are housed
+ * @return [String] a URL to the assets folder in ../../assets
+ */
 function asset_url() {
 	return base_url() . 'assets';
 }
@@ -36,6 +44,7 @@ function is_logged_in()
 		return true;
 	}
 }
+
 
 /**
  * Destroys all user data and logs out the user

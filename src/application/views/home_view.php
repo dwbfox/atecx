@@ -1,9 +1,142 @@
 <div id="content">
 	<div class="content">
-	<div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more</a></p>
-      </div>
+		<div id="myCarousel" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+			<div class="item active"><img src="<?php echo asset_url();?>/images/hero2.jpg"></div>
+			<div class="item"><img src="<?php echo asset_url();?>/images/rainbow.jpg"></div>
+			<div class="item"><img src="<?php echo asset_url();?>/images/hero.png"></div>
+
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+				<!-- Sign up -->
+		<div id="signup_head">
+		  <h1>join the experiment.</h1>
+		  <p>ATEC Experimental is a platform to showcase your talents and develop your potential. Give ATEC Experimental a spin!</p>
+		  <span id="singnup_buttons">
+			<a href="signup.html" class="btn btn-primary btn-large"><strong>Sign Up</strong></a> <strong>or</strong>
+			<a href="profile.html" class="btn btn-primary btn-large"><strong>Log In</strong></a>
+		  </span>
+		</div>
+		
+		<div id="trending_projects">
+			<h2>Trending Projects</h2>
+			<div class="" id="projects-inner">
+					<!-- project grid -->
+				<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				
+								<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+				<div class="project-thumb thumbnail">
+					<div class="project-thumb-inner">
+						<a href="#"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
+						<div class="project-thumb-description">
+							<span><strong>Diablo 4</strong></span>
+							<span>Owner:<strong>jane09</strong></span>
+							<span>Members:<strong>5</strong></span>
+						</div>
+					</div>
+				</div>
+			<!-- /project grid -->
+			</div>
+		</div>
 	</div>
 </div>
