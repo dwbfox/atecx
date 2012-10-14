@@ -1,19 +1,26 @@
+/**
+ * 	The following stylesheet is the master CSS
+ *  responsible for the default set of styles the 
+ * 	views is /views/_template/ contain. Edit with caution.
+ * 
+ *  If you need to override a style, it's highly suggested you 
+ *  create one for your view
+ */
 body {
 	padding-top:65px;
 }
 
 
-
 #content > .content {
 	width: 100%;
-	box-shadow: 0px -3px 2px #E0E0E0;
+	box-shadow: 0px -3px 11px #C5ADAD;
 	border-radius: 5px;
 	padding: 10px;
 }
 
 
 #wrapper {
-	/*width:1059px;*/
+	width:1059px;
 }
 
 #footer {

@@ -45,6 +45,9 @@ class User_model extends CI_Model
             // Iterate through each proficiency the user has set and insert it into the database
             
             // My god... this is why I love CI
+            // Active Record sanitizes SQL entries
+            // It also is enabled for XSS protection, although we might need to set up
+            // custom checks later on in the production version of this script
             $this->db->set('user_id', $user_id);
             $this->db->set('prof_id', $prof_id);
             $this->db->set('prof_value', $prof_value);
@@ -59,7 +62,7 @@ class User_model extends CI_Model
 	
 	/**
 	 * Gets an assocative array with the user's proficiency values
-	 * mapped to the skill i.e. "Adobe Photoshop" => 20
+	 * mapped to the skill e.g. "Adobe Photoshop" => 20
      * @param [string] $screen_name The screen name of the user
 	 * @return [Array] An assocative array containg all of the user's proficiencies
 	 */

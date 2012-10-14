@@ -5,14 +5,22 @@ class Callback extends CI_Controller {
 	
 	public function index() 
 	{
-		// First check to see if Twitter sent us the oAuth data successfully
+		// First let's check if the user even signed in
+		if ($this->input->get('denied')) {
+			show_error('You have to sign in before becoming a member of ' . SITE_NAME .'!',200,'Ehem...');
+		}
+		
+		// check to see if Twitter sent us the oAuth tokens successfully
 		if (!$this->input->get('oauth_token') || !$this->input->get('oauth_verifier')) {
 			
-			// Twitter did not send back the OAuth data.
-			show_error('Unable to authenticate you. ' . anchor(base_url(),'Try again.'));
+			// Twitter did not send back the OAuth tokens. Something went wrong
+			// Send the user back to the home page. Calling log_out destroys session data and 
+			// redirects the user to the home page
+			log_out();
 			
 		} else {
 			
+			// Okay, we got the OAuth Tokens 
 			$oauth_token = $this->input->get('oauth_token');
 			$oauth_verifier = $this->input->get('oauth_verifier');
 			

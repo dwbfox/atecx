@@ -5,11 +5,6 @@ $(function () {
     // Show the first page
     $('#step1').fadeIn('fasst');
 
-    // Disable the default behavior of all forms
-    $('form').on('submit', function (e) {
-        e.preventDefault();
-    });
-
 
     // Remove invalid email address
     $('#appendedInput').on('keyup', function (e) {
@@ -20,15 +15,14 @@ $(function () {
 
 
     // INTERESTS INTERACTION ====================
-    $('#interests button').on('click submit', function (e) {
+    $('#step2 form').on('submit', function (e) {
+    	e.preventDefault();
         var interest = $('#interests input').val();
-
+        $('#interests input').val('');
         if (interest.length === 0) {
             return;
         }
-
         $('#interests-list').prepend('<li>' + interest + '</li>').fadeIn(500);
-
     });
 
     // User added interest
@@ -41,6 +35,7 @@ $(function () {
     $('#proficiencies button').on('click', function (e) {
         // Get the current selected proficiency and the proficiency id which will be injected into our DB
         var prof_id = $('#proficiencies select').val();
+        if (prof_id.length <=0) return;
         var prof_name = $('#proficiencies option[value="' + prof_id + '"]').text()
 		$('#proficiencies option[value="' + prof_id + '"]').remove();
         // Show the slider to the user

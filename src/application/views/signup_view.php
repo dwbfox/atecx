@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div id="signup" class="container">
-			<div id="step1" class="step-inner row offset3">
+			<div id="step1" class="step-inner row offset4">
 				<form>
 					<label>Username</label>
 					<input type="text" value="<?php echo $_SESSION['screen_name']; ?>"  name="username" disabled="" />
@@ -29,7 +29,7 @@
 				</form>
 				<a href="#" id="step1_submit" class="btn btn-primary btn-success btn-large row offset2">Next</a>
 			</div> <!-- STEP1  -->
-			<div id="step2" class="step-inner row offset3">
+			<div id="step2" class="step-inner row offset4">
 					<form>
 						<div id="interests">
 							<div class="input-append">
@@ -67,7 +67,7 @@
 			<div id="step3" class="step-inner span6 offset4">
 				<h2>You're done!</h2>
 				<h3>What do you want to do next?</h3>
-				<a href="<?php echo 'profile/' . $_SESSION['screen_name']; ?>" class="btn btn-primary btn-info">Go to your profile</a>
+				<?php echo anchor('profile/' . $_SESSION['screen_name'],'Go to your profile',array('class'=>'btn btn-primary btn-info')); ?>
 				<a class="btn btn-primary btn-info">Start a project</a>
 			</div>
 		</div> <!-- SIGNUP DIV -->

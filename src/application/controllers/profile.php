@@ -17,15 +17,20 @@ class Profile extends CI_Controller {
 	 * @link http://codeigniter.com/forums/viewthread/143515/
 	 */
 	public function _remap($screen_name) {
-		if ($screen_name === '') {
-			redirect('/');
+		$user_info = $this->user_model->getUserInfoAssoc($screen_name);
+		
+		// invalid screen name supplied
+		if ($screen_name === '' ||
+			strlen($screen_name) <= 1 ||
+			!$user_info) {
+			show_error('Sorry, dude! The specified user was not found.',404,'User not found.');
 		}
+		
 		// Include CSS specific to the profile page to the header
 		$header['css'] = array('profile');
 		$header['page_title'] = $screen_name .'\'s Profile';
 		
 		// Get information about the user from our model and pass it to the profile view
-		$user_info = $this->user_model->getUserInfoAssoc($screen_name);
 		$num_projects = '0'; // TODO - Implement create a project functionality
 		$watch_list = '0';
 		$profs = $this->user_model->getUserProficiencies($screen_name);

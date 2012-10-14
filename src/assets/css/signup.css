@@ -1,6 +1,7 @@
 h3 {
 	border-bottom: 1px solid rgb(201, 201, 201);
 	color: #636363;
+	background:none;
 	font-weight: lighter;
 }
 
@@ -24,7 +25,9 @@ h3 {
 /* PROGRESS INDICATOR */
 
 #progress_breadcrumb {
-	margin-bottom: 5px;
+	width: 744px;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 #progress_breadcrumb button {

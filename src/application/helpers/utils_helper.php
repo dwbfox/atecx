@@ -1,14 +1,10 @@
 <?php
 
 
-/**
- * Used in the login process
- */
 define('CONSUMER','JqREbOjNdtCGcW2Pijzyyg');
 define('CONSUMER_SECRET','Jab8uPyIAXmyagwisrVFPFo6mHJaTjbyVOzzn3UwJg');
-define('SITE_NAME','ATEC Experimental');
-define('CALLBACK_URL','http://foxserv.us.to/atecx/callback');
-define('FORCE_AUTH',true); // Forces the user to reauthenticate with Twitter each time they log in
+define('SITE_NAME','ATEC Experimental'); // Displayed on header.php
+define('CALLBACK_URL','http://foxserv.us.to/atecx/callback'); // the callback URL for Twitter's OAuth
 
 
 
@@ -24,7 +20,9 @@ function asset_url() {
 
 
 /**
- * Points to the avatar image url of the specified user
+ * Points to the avatar image url of the specified user.
+ * Twitter offers a public API to access users images.
+ * 
  * @param [String] $screen_name  A valid Twitter screen_name
  * @param [String] $size A valid avatar size, either bigger, normal, mini, or original
  * @return [String] A URL pointing to the user's avatar image
@@ -48,6 +46,7 @@ function is_logged_in()
 
 /**
  * Destroys all user data and logs out the user
+ * @return None
  */
 function log_out() {
 	session_destroy();

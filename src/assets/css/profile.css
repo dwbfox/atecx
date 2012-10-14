@@ -6,11 +6,17 @@
 }
 
 #sidebar h2 {
-	color: #FFF;
-	font-size: 13pt;
+	color: white;
+	font-size: 9pt;
 	padding-left: 21px;
-	background: #444444;
+	background: #444;
 }
+
+#main_window h2 {
+	font-size: 22px;
+	line-height: 40px;
+}
+
 
 
 #sidebar ul li {
@@ -56,8 +62,3 @@
 
 .avatar {
 	clear:both;
-}
-
-.avatar img {
-	border-radius:10px;
-}
