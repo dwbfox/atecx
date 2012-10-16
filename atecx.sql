@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 3.4.10.1
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Oct 15, 2012 at 10:11 PM
--- Server version: 5.1.61
--- PHP Version: 5.2.9
+
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -16,9 +9,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- Database: `chromefa_atecx`
---
 
 -- --------------------------------------------------------
 
