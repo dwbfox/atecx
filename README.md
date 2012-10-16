@@ -16,13 +16,13 @@ structure ATECX needs.
 
 1) Navigate to /src/application/config/database.php and change following lines to properly 
 refelct your database setup:
-
-			$db['default']['hostname'] = 'localhost';
-			$db['default']['username'] = 'root';
-			$db['default']['password'] = '';
-			$db['default']['database'] = 'atecx';
-			$db['default']['dbdriver'] = 'mysql';
-
+<code>
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'atecx';
+$db['default']['dbdriver'] = 'mysql';
+</code>
 			
 			
 2) Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct callback URL for Twitter:
