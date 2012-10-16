@@ -1,10 +1,10 @@
-ATEC Experimental
+#ATEC Experimental
 
 
 
 
 
-Deployment Guide
+##Deployment Guide
 _______________________
 
 Assuming you have MySQL, PHP ( +cURL), and Apache setup, you'll need to edit the following files
