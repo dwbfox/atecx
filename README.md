@@ -25,5 +25,5 @@ refelct your database setup:
 
 			
 			
-2) Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct:
+2) Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct callback URL for Twitter:
 				define('CALLBACK_URL','http://example.com/atecx/callback'); // the callback URL for Twitter's OAuth
