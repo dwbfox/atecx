@@ -30,16 +30,18 @@
 					</div>
 				</div>
 				<?php if (is_logged_in()): ?>
-				<h4>Account Control</h4>
-
-				<div class="info">
-					<a class="btn btn-info">Create a project</a>
-				</div>
-				<div class="info">
-					<a class="btn btn-success">Liberate your data</a>
-				</div>
-				<div class="info">
-					<a class="btn btn-danger">Delete account</a>
+				<div id="account_control">
+					<h4>Account Control</h4>
+	
+					<div class="info">
+						<a class="btn btn-info">Create a project</a>
+					</div>
+					<div class="info">
+						<a class="btn btn-success">Liberate your data</a>
+					</div>
+					<div class="info">
+						<a class="btn btn-danger">Delete account</a>
+					</div>
 				</div>
 				<?php endif; ?>
 			</div>

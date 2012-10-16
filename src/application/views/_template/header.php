@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/css/ui-lightness/jquery-ui-1.8.23.custom.css">
 	<link rel="styylesheet" type="text/css" href="<?php echo asset_url(); ?>/fontAwesome/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/fontAwesome/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/css/header.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/css/main.css">
 	<?php
 	// Inject any custom css if it's passed by our controller
@@ -35,14 +36,15 @@
 			</form>  
 			<?php if (is_logged_in()): ?>
 			<div class="btn-group pull-right">
-			  <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#">
-				<i class="icon-cog"></i>  <?php echo $_SESSION['screen_name']; ?>
+			  <a class="btn-dashboard btn dropdown-toggle" data-toggle="dropdown" href="#">
+				 <img src="<?php echo twitter_profile_image($_SESSION['screen_name'], 'mini');?>" >
+				 <?php echo$_SESSION['screen_name']; ?>
 
 			  </a>
 			  <ul class="dropdown-menu">
 			    <?php 
-		    	 echo '<li><a href="profile/' . $_SESSION['screen_name'] .'" ><i class="icon-user"></i>Dashboard</a></li>';
-		    	 echo '<li><a href="signout/"><i class="icon-unlock"></i>Sign out</a></li>';
+		    	 echo '<li><a href="' . base_url(). 'profile/' . $_SESSION['screen_name'] .'" ><i class="icon-user"></i>Dashboard</a></li>';
+		    	 echo '<li><a href="'. base_url(). '/signout"><i class="icon-unlock"></i>Sign out</a></li>';
 			    ?>
 			  </ul>
 			</div>

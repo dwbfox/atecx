@@ -4,7 +4,7 @@
 define('CONSUMER','JqREbOjNdtCGcW2Pijzyyg');
 define('CONSUMER_SECRET','Jab8uPyIAXmyagwisrVFPFo6mHJaTjbyVOzzn3UwJg');
 define('SITE_NAME','ATEC Experimental'); // Displayed on header.php
-define('CALLBACK_URL','http://foxserv.us.to/atecx/callback'); // the callback URL for Twitter's OAuth
+define('CALLBACK_URL','http://foxserv.us.to/atecx/src/callback'); // the callback URL for Twitter's OAuth
 
 
 

@@ -16,24 +16,24 @@
 			</div>
 		</div>
 		<div id="signup" class="container">
-			<div id="step1" class="step-inner row offset4">
+			<div id="step1" class="step-inner row offset3">
 				<form>
-					<label>Username</label>
+					<label class="text-info">Username</label>
 					<input type="text" value="<?php echo $_SESSION['screen_name']; ?>"  name="username" disabled="" />
 					<div class="input-append">
-					  <label>UTD Email</label>
+					  <label class="text-info">UTD Email</label>
 					  <input class="span2" id="appendedInput" size="16" type="text" required=""><span class="add-on">@utdallas.edu</span>
 					</div>
-					<label>Tell us about yourself</label>
+					<label class="text-info">Tell us about yourself</label>
 					<textarea><?php echo $_SESSION['bio']; ?></textarea>
 				</form>
 				<a href="#" id="step1_submit" class="btn btn-primary btn-success btn-large row offset2">Next</a>
 			</div> <!-- STEP1  -->
-			<div id="step2" class="step-inner row offset4">
+			<div id="step2" class="step-inner row offset3">
 					<form>
 						<div id="interests">
 							<div class="input-append">
-								<label>What are some things that spark your curiosity?</label>
+								<label class="text-info">What are some things that spark your curiosity?</label>
 								<input type="text" name="interests" placeholder="Steam..."><button class="btn" type="button"><span class="icon-plus-sign"></span></button>
 	
 							</div>
@@ -45,7 +45,7 @@
 					<form>
 						<div id="proficiencies">
 							<div class="input-append">
-								<label>You have talent. List some of them below.</label>
+								<label class="text-info">You have talent. List some of them below.</label>
 								<select>
 									<option data-name="Adobe Photoshop" value="1">Adobe Photoshop</option>
 									<option data-name="Adobe Premiere" value="2">Adobe Premiere</option>
@@ -66,7 +66,7 @@
 			</div><!-- STEP2 -->
 			<div id="step3" class="step-inner span6 offset4">
 				<h2>You're done!</h2>
-				<h3>What do you want to do next?</h3>
+				<h3 class="text-info">What do you want to do next?</h3>
 				<?php echo anchor('profile/' . $_SESSION['screen_name'],'Go to your profile',array('class'=>'btn btn-primary btn-info')); ?>
 				<a class="btn btn-primary btn-info">Start a project</a>
 			</div>

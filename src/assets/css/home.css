@@ -1,31 +1,46 @@
+
+
+
 #trending_projects {
-	min-height: 500px;
-	width: 100%;
-	background: #FFFFFF;
+	min-height: 306px;
+	padding: 11px;
+	background: #C74406;
+}
+
+#trending_projects h2 {
+	color: white;
+	font-size: 24pt;
 }
 
 #signup_head {
-	margin: 0;
-	background: #111A22;
-	color: #FFFFFF;
-	text-shadow: 1px 2px 5px #000000;
-	padding: 18px;
-	line-height: 16px;
-	height: 173px;
-	border-top: 5px solid white;
+	color: rgb(207, 255, 209);
+	padding: 10px;
+	background: #0FC216;
+	margin: 5px 0px 5px 0px;
+	height: 192px;
 }
 	
+#signup_buttons {
+	position: relative;
+	left: 89px;
+	top: 78px;
+	font-size: 45pt;
+}
 #signup_head h1 {
-	font-size: 38pt;
+	font-size: 47pt;
 	margin-bottom: 26px;
 	font-family: sans-serif;
 	color: #F5F5F5;
 }
 
 #signup_head p  {
-	font-size: 11pt;
-	width: 400px;
-
+	font-size: 13pt;
+	width: 541px;
+	color: rgb(255, 253, 253);
+	text-shadow: 1px 1px 7px black;
+	background: #343534;
+	padding: 18px;
+	margin-left: -9px;
 }
 
 #signup_buttons a{
@@ -34,6 +49,7 @@
 
 .carousel {
 	border:none;
+	border-radius: 5px;
 	margin-bottom:0px;
 }
 
@@ -47,16 +63,15 @@
 }
 
 .project-thumb {
-	background: #FFFFFF;
-	border: 1px solid #D8C9C9;
 	width: 149px;
+	box-shadow: 1px 2px 3px #000;
 	display:inline-block;
-	margin: 5px 84px 5px 0px;
-	box-shadow: 1px 2px 3px #CCC;
-	min-height:160px;
+	margin: 5px 53px 5px 0px;
+	min-height: 144px;
 }
 
 .project-thumb-inner, .thumbnail {
+    background: #F0DCDC;
 }
 
 .project-thumb-description {

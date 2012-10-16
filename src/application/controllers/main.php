@@ -9,11 +9,11 @@ class Main extends CI_Controller {
 		// This is the home page.
 		$header['css'] = array('home');
 		
-		
+		$footer['js'] = array('home');
 		// Load the home page
 		$this->load->view('_template/header',$header);
 		$this->load->view('home_view');
-		$this->load->view('_template/footer');
+		$this->load->view('_template/footer',$footer);
 		
 	}
 

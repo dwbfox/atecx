@@ -1,6 +1,21 @@
+
+/* Override the content properties */
+
+#content > .content {
+	box-shadow:none;
+}
+
+
+.container {
+	width:100%;
+}
+
+
 #sidebar {
-	min-width:150px;
-	padding-left: 31px;
+	float:right;
+	min-width: 224px;
+	padding: 0px 0px 77px 10px;
+	background: #E9E9E9;
 	border-left: 1px solid #ECECEC;
 	color: rgb(73, 54, 54);
 }
@@ -26,7 +41,8 @@
 }
 
 .info {
-	margin-bottom: 32px;
+	float: left;
+	margin-bottom: 2px;
 }
 
 .info a  {
@@ -36,24 +52,25 @@
 }
 
 
-
 /* STAT * */
 
 #user_info {
 }
 
 .stat {
+    float: left;
 	
+    margin-right: 31px;
+    display: block;
 }
 
 .stat-title {
-    font-size: 45pt;
+    font-size: 47pt;
 	
-    padding-left: 0pt;
 }
 
 .stat-verb {
-    font-size: 14pt;
+    font-size: 8pt;
 	
 }
 #main_window {
@@ -62,3 +79,10 @@
 
 .avatar {
 	clear:both;
+}
+
+/* ACCOUNT CONTROL */
+
+#account_control {
+	margin-top:10px;
+}

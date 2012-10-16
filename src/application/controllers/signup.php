@@ -33,10 +33,13 @@ class Signup extends CI_Controller
         $header['css']  = array('signup');
         $header['page_title'] = 'Sign up';
         
+		// Add relevant JavaScript files to the footer
+		$footer['js'] = array('signup');
+		
         // Load the home page
         $this->load->view('_template/header', $header);
         $this->load->view('signup_view');
-        $this->load->view('_template/footer');
+        $this->load->view('_template/footer',$footer);
       }
     
     
