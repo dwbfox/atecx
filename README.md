@@ -22,8 +22,9 @@ refelct your database setup:
 	$db['default']['password'] = '';
 	$db['default']['database'] = 'atecx';
 	$db['default']['dbdriver'] = 'mysql';
-			
+```			
 			
 2) Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct callback URL for Twitter:
-<pre>
-				define('CALLBACK_URL','http://example.com/atecx/callback'); // the callback URL for Twitter's OAuth</pre>
+```php
+define('CALLBACK_URL','http://example.com/atecx/callback'); // the callback URL for Twitter's OAuth
+```
