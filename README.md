@@ -2,7 +2,7 @@
 
 
 ##Changelog
-#7 November 2012
+####7 November 2012
 * Project thumbnails are now smaller and narrower. Also, the "Project Page" buttons are removed from project thumbnails.
 * Empty thumbnail added to allow the user to add a new project
 * Users are now able to delete their accounts, but their project data is preserved.
@@ -14,7 +14,7 @@
 * Lots of back end fixes and corrections
 * atec.sql updated to reflect the latest database 
 
-#2 November 2012
+####2 November 2012
 * Implemented recent projects list in the front page
 * Sign up page now has back buttons before AJAX is sent
 * Proficiencies and interests have been redesigned from the ground up
