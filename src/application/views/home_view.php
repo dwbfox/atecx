@@ -3,9 +3,9 @@
 		<div id="myCarousel" class="carousel slide">
 		  <!-- Carousel items -->
 		  <div class="carousel-inner">
-			<div class="item active"><img src="<?php echo asset_url();?>/images/hero2.jpg"></div>
-			<div class="item"><img src="<?php echo asset_url();?>/images/rainbow.jpg"></div>
-			<div class="item"><img src="<?php echo asset_url();?>/images/hero.png"></div>
+			<div class="item active"><img src="<?php echo asset_url(); ?>/images/hero2.jpg"></div>
+			<div class="item"><img src="<?php echo asset_url(); ?>/images/rainbow.jpg"></div>
+			<div class="item"><img src="<?php echo asset_url(); ?>/images/hero.png"></div>
 
 		  </div>
 		  <!-- Carousel nav -->
@@ -13,70 +13,54 @@
 		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
 		
-				<!-- Sign up -->
-		<div id="signup_head">
-
-			<div class="pull-left">
-			  <h1>join the experiment.</h1>
-			  <p>ATEC Experimental is a platform to showcase your talents and develop your potential. Give ATEC Experimental a spin!</p>
+		<!-- Sign up -->
+		<div class="panel panel-left pull-left">
+			<div>
+			  <h2>join.</h2>
+			  <p><?php echo SITE_NAME; ?> is a platform to showcase your talents and develop your potential. Give <?php echo SITE_NAME; ?> a spin!</p>
 		  </div>
 		  <?php if (!is_logged_in()): ?>
-		  <div class="pull-left" id="signup_buttons">
-			<a href="signup/" class="btn btn-primary btn-large"><strong>Sign Up</strong></a> <strong>or</strong>
-			<a href="signup/" class="btn btn-primary btn-large"><strong>Sign In</strong></a>
+  		  <div class="pull-left" id="signup_buttons">
+			<a href="auth/login" class="btn btn-primary btn-large"><strong>Sign Up</strong></a>
   		  </div>
-  		 <?php endif; ?>
-
+  		<?php endif; ?>
 		</div>
-		<div id="trending_projects">
-			<h2>Trending Projects</h2>
-			<div class="" id="projects-inner">
-					<!-- project grid -->
-				<div class="project-thumb thumbnail">
-					<div class="project-thumb-inner">
-						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
-						<div class="project-thumb-description">
-							<span><strong>Diablo 4</strong></span>
-							<i class="icon-user"></i> <strong>jane09</strong>
-							<span>Members:<strong>5</strong></span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="project-thumb thumbnail">
-					<div class="project-thumb-inner">
-						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
-						<div class="project-thumb-description">
-							<span><strong>Diablo 4</strong></span>
-							<i class="icon-user"></i> <strong>jane09</strong>
-							<span>Members:<strong>5</strong></span>
-						</div>
-					</div>
-				</div>
+		
+		<!-- status update-->
+		<div class="panel panel-right pull-right">
+			<div class="pull-left">
+			  <h2>watch.</h2>
+			  <p>Latest updates on <?php echo SITE_NAME; ?></p>
+			  <div id="latest_updates">
+			  	<div class="avatar"><img src="<?php echo twitter_profile_image('atecdag','normal'); ?>" alt="avatar" /></div>
+			  		<div class="update">
+			  			<p>Hey guys, I just uploaded yet another version of the model!</p>
+			  		</div>
+			  </div>
+		  </div>
+		</div>
+		<div class="panel" id="trending_projects">
+			<div class="panel" id="projects-inner">
+				<h2>explore.</h2>
+				<!-- project grid -->
+				<ul class="thumbnails">
+					<?php if (!is_array($recent_projects)) return;
+					 foreach ($recent_projects  as $project): ?>
+					  <li>
+					    <div class="project-thumbnail thumbnail">
+						      <a href="<?php echo base_url() . 'project/view/' . $project->project_id; ?>" class="project-thumbnail-img">
+						      	<img src="<?php echo base_url() .  $project->project_image_thumb;?>" alt="">
+						      </a>
+					      <h3><?php echo $project->project_name; ?></h3> 
+					      <small><?php echo anchor('profile/' .  $project->screen_name,$project->screen_name); ?></small>
+					      <p class="project-thumbnail-tagline"><?php echo $project->project_tagline; ?></p>
+					    </div>
+					  </li>
+					<?php endforeach; ?>
+				</ul>
 
-				<div class="project-thumb thumbnail">
-					<div class="project-thumb-inner">
-						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
-						<div class="project-thumb-description">
-							<span><strong>Diablo 4</strong></span>
-							<i class="icon-user"></i> <strong>jane09</strong>
-							<span>Members:<strong>5</strong></span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="project-thumb thumbnail">
-					<div class="project-thumb-inner">
-						<a href="project.html"><img src="http://dummyimage.com/150x150/000000/fff&text=project" alt="project-name"></a>
-						<div class="project-thumb-description">
-							<span><strong>Diablo 4</strong></span>
-							<i class="icon-user"></i> <strong>jane09</strong>
-							<span>Members:<strong>5</strong></span>
-						</div>
-					</div>
-				</div>
-			<!-- /project grid -->
-			</div>
+				<!-- END PROJECT  GRID -->
+			</div> <!-- END PROJECT INNTER -->
 		</div>
 	</div>
 </div>

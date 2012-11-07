@@ -6,23 +6,41 @@
  *  If you need to override a style, it's highly suggested you 
  *  create one for your view
  */
+
+
 body {
 	padding-top:65px;
-	background:url('../images/footer-bottom.png') repeat-x bottom;
+	background: #E2E2E2;
 }
 
+h1, h2 {
+	font-family: 'Doppio One', sans-serif;
+}
+
+h1 {
+	background: #FF940B;
+	font-size: 15pt;
+	border-radius: 5px;
+	padding: 5px 5px 5px 34px;
+	color: white;
+	box-shadow: 2px 4px 0px #FFFFFF;
+}
 
 #content > .content {
-	width: 100%;
-	box-shadow: 0px 0px 11px #C5ADAD;
+	width: auto;
+	box-shadow: 0px 0px 11px #A8A8A8;
 	border-radius: 5px;
 	padding: 10px;
+	background: #FFF;
 }
 
 
 #wrapper {
-	width:1059px;
+	width:1085px;
 }
+
+
+
 
 #footer {
 	margin: 121px 0px 0px 0px;
@@ -34,3 +52,39 @@ body {
 }
 
 
+/* THUMNNAILS */
+.project-thumbnail {
+	background: #F7F7F7;
+	height: 246px;
+	box-shadow: 1px 2px 3px rgb(116, 116, 116);
+	width: 184px;
+	font-size: 10pt;
+	padding: 5px;
+}
+
+
+.project-thumbnail h3 {
+	line-height: 18px;
+	font-size: 13pt;
+	color: #494E50;
+}
+
+.project-thumbnail-author {
+	position: relative;
+	bototm:5px;
+}
+.project-thumbnail-tagline {
+	padding: 5px;
+	border-radius: 3px;
+	color: #646464 !important;
+	overflow: hidden;
+	font-size: 9pt !important;
+	height: 54px;
+	background: #E0E0E0;
+}
+
+
+.project-thumbnail-img img {
+	border-radius:5px;
+	border:none;
+}

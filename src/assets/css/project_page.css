@@ -1,0 +1,15 @@
+body {
+	padding-top:39px;
+
+}
+
+#wrapper {
+	width:100%;
+}
+
+
+#content > .content {
+	background: none;
+	box-shadow:none;
+}
+

@@ -1,0 +1,26 @@
+
+
+#content form {
+	margin: 0 auto;
+	background: #F1F1F1;
+	padding: 10px;
+	min-width: 183px;
+	width: 423px;
+	border-radius: 10px;
+	color: #53879B;
+}
+
+#content form textarea {
+	height: 107px;
+}
+
+
+#content form input[type="text"],textarea {
+	width:95%;
+}
+
+#content form input[name="project_name"] {
+	font-weight: bolder;
+	font-size: 15pt;
+	height: 32px;
+}

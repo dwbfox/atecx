@@ -1,4 +1,6 @@
 <?php
+// Fail silently if someone tries to access this page directly
+if (!defined('BASEPATH')) exit();
 
 
 class Profile extends CI_Controller {
@@ -16,26 +18,40 @@ class Profile extends CI_Controller {
 	 * Discussion is needed as to whether or not to allow public access to the profile pages.
 	 * @link http://codeigniter.com/forums/viewthread/143515/
 	 */
-	public function _remap($screen_name) {
+	public function _remap($screen_name=null) {
+
+		// The user supplied an invalid user
+		if ($screen_name === null)
+		{
+			redirect('auth/logout');
+		}
+		
+		// Check our database to see if the user exists
 		$user_info = $this->user_model->getUserInfoAssoc($screen_name);
 		
-		// invalid screen name supplied
-		if ($screen_name === '' ||
-			strlen($screen_name) <= 1 ||
-			!$user_info) {
-			show_error('Sorry, dude! The specified user was not found.',404,'User not found.');
+		// The user does not exist. Send the visitor back to the front page
+		if ($screen_name === '' || !$user_info) {
+			redirect('/');
 		}
 		
 		// Include CSS specific to the profile page to the header
 		$header['css'] = array('profile');
 		$header['page_title'] = $screen_name .'\'s Profile';
+		$footer['js'] = array('profile');
 		
+
+
 		// Get information about the user from our model and pass it to the profile view
-		$num_projects = '0'; // TODO - Implement create a project functionality
+		$num_projects = $this->projects_model->getProjectCountForUser($screen_name);
 		$watch_list = '0';
 		$profs = $this->user_model->getUserProficiencies($screen_name);
+		$project_tiles = $this->projects_model->getProjectInfoByScreename($screen_name);
+		
 		$data['profile'] = array(
+			'bio' => $user_info['bio'],
+			'project_tiles' => $project_tiles,
 			'screen_name' => $screen_name,
+			'num_watched' => 0,
 			'num_projects' => $num_projects,
 			'join_date' => $user_info['join_date'],
 			'profs' => $profs
@@ -43,6 +59,6 @@ class Profile extends CI_Controller {
 		
 		$this->load->view('_template/header',$header);
 		$this->load->view('profile_view',$data);
-		$this->load->view('_template/footer');
+		$this->load->view('_template/footer',$footer);
 	}
 }

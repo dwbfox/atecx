@@ -1,4 +1,6 @@
 <?php
+// Fail silently if someone tries to access this page directly
+if (!defined('BASEPATH')) exit();
 
 class Signup extends CI_Controller
   {
@@ -11,17 +13,11 @@ class Signup extends CI_Controller
       {
       	// Call the parent constructor before 
         parent::__construct();
-        
-		if (is_logged_in()) {
-			redirect('profile');
-		}
-		
-        // Make sure the user has first signed in with twitter
-        if (!isset($_SESSION['bio']) || !isset($_SESSION['screen_name']))
-          {
-            // The user doesn't have the credentials. Make them sign in again.
-            redirect('/');
-          }
+          
+    		if (is_logged_in()) {
+    			redirect('profile');
+    		}
+
       }
     
     public function index()
@@ -32,31 +28,49 @@ class Signup extends CI_Controller
         // Add relevant CSS and data to the header
         $header['css']  = array('signup');
         $header['page_title'] = 'Sign up';
+
+        $content['prof_roles']['animation'] = $this->user_model->getProficiencyRoles('animation');
+        $content['prof_roles']['game_design'] = $this->user_model->getProficiencyRoles('Game Design');
+        $content['prof_roles']['interactive'] = $this->user_model->getProficiencyRoles('interactive/Web');
+
         
-		// Add relevant JavaScript files to the footer
-		$footer['js'] = array('signup');
+		    // Add relevant JavaScript files to the footer
+		    $footer['js'] = array('signup');
 		
         // Load the home page
         $this->load->view('_template/header', $header);
-        $this->load->view('signup_view');
+        $this->load->view('signup_view',$content);
         $this->load->view('_template/footer',$footer);
       }
     
     
     public function create()
       {
+
+        // Make sure the user has first signed in with twitter
+        // This data is first set by auth.php
+        if (!isset($_SESSION['bio']) ||
+           !isset($_SESSION['oauth_user_id']) ||
+           !$this->input->post('userData'))
+          {
+            // The user doesn't have the credentials. Make them sign in again.
+            redirect('/');
+          }
+          
         // Recieved user data from server side AJAX
         // We now combine it with existing information
         $userData = $this->input->post('userData');
+
         
         // Check to see if proficicencies might be null
         
         // This is all the info we need about the user
         $createData = array(
             "email" => $userData['email'] . '@utdallas.edu', // TODO - Verify email
-            "screen_name" => $_SESSION['screen_name'],
-            "bio" => $_userData['bio'],
-            "interests" => $userData['interests']
+            "screen_name" => $userData['screen_name'],
+            "bio" => $userData['bio'],
+            "interests" => $userData['interests'],
+            "oauth_user_id" => $_SESSION['oauth_user_id']
         );
         
         // Add proficiencies if it's set
@@ -70,11 +84,14 @@ class Signup extends CI_Controller
         
         if (!$result)
           {
-            echo "Uh oh. Something bad happened and we were unabled to create your account. Please try again later.";
+            // Something went wrong while adding user to database
             $this->output->set_status_header(500); 
+            
           } else {
           	// User created their account. Sign them in.
           	$_SESSION['signed_in'] = true;
+            $_SESSION['screen_name'] = $userData['screen_name'];
+            die(var_dump($createData));
           }
       }
   }

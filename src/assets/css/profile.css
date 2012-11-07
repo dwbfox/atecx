@@ -1,10 +1,14 @@
 
-/* Override the content properties */
+/* Override the main content properties */
 
-#content > .content {
-	box-shadow:none;
+h3:first {
+	background: #555454;
+	color: white;
+	font-size: 14pt;
+	padding-left: 10px;
+	line-height: 23pt;
+	border-radius: 3px;
 }
-
 
 .container {
 	width:100%;
@@ -12,10 +16,10 @@
 
 
 #sidebar {
-	float:right;
-	min-width: 224px;
-	padding: 0px 0px 77px 10px;
-	background: #E9E9E9;
+	min-width: 195px;
+	background: #F7F7F7;
+	border-radius: 6px;
+	padding: 25px 0px 71px 27px;
 	border-left: 1px solid #ECECEC;
 	color: rgb(73, 54, 54);
 }
@@ -52,6 +56,7 @@
 }
 
 
+
 /* STAT * */
 
 #user_info {
@@ -73,16 +78,50 @@
     font-size: 8pt;
 	
 }
-#main_window {
-	
-}
 
 .avatar {
 	clear:both;
+}
+
+.avatar img {
+	border-radius:5px;
 }
 
 /* ACCOUNT CONTROL */
 
 #account_control {
 	margin-top:10px;
+}
+
+
+/* TABS */
+#profile_menu li {
+	margin-right:12px;
+}
+
+
+/* BOOTSTRAP MODS */
+.nav-tabs > li > a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 20px;
+	box-shadow: 1px -1px 3px #D1D1D1;
+	border: 1px solid transparent;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+/* NEW PROJECT TILE */
+.project-thumbnail-new i {
+	font-size: 90pt;
+	margin-top: 77px;
+	margin-left: 13px;
+	color: #E2E2E2;
+	margin-bottom: 25px;
+}
+
+.project-thumbnail-new h3 {
+	text-align: center;
+	color:#A2A2A2;
 }
