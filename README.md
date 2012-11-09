@@ -1,5 +1,9 @@
 #ATEC Experimental
 
+
+
+##Changelog
+
 ####8 November 2012
 * TimelineJS now implemented
 * A new controller parameter for project, (project/:id/timeline) now spits out JSON to be used by TimelineJS or exports
@@ -7,7 +11,6 @@
 * Project page redesigned and now operational
 * Minor bug fixes
 
-##Changelog
 ####7 November 2012
 * Project thumbnails are now smaller and narrower. Also, the "Project Page" buttons are removed from project thumbnails.
 * Empty thumbnail added to allow the user to add a new project
