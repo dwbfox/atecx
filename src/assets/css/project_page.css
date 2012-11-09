@@ -1,15 +1,98 @@
-body {
-	padding-top:39px;
 
-}
-
-#wrapper {
-	width:100%;
-}
 
 
 #content > .content {
+	box-shadow: none;
 	background: none;
-	box-shadow:none;
 }
 
+
+#wrapper {
+	background: none;
+}
+
+#project_dashboard {
+	min-height: 250px;
+	background: #EEEEEE;
+	color: rgb(80, 80, 80);
+}
+
+#push_status {
+	position: relative;
+	top: 131px;
+	right: 51px;
+}
+
+
+
+.project_info {
+	margin-bottom:20px;
+	min-height: 300px;
+}
+
+.project_title {
+	background: black;
+	position: absolute;
+	min-height: 105px;
+	color: #FFF;
+	padding-left: 7px;
+	min-width: 224px;
+}
+.project_title h2 {
+	font-size: 20pt;
+	line-height: 4px;
+	padding-top: 14px;
+}
+
+.project_title p {
+	font-size: 10pt;
+}
+
+.project_stats {
+	text-shadow: 1px 1px 13px white;
+	padding: 15px;
+	background: url(../images/transparent.png);
+	float: left;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 12pt;
+	color: #353535;
+	font-weight: bold;
+	margin: 137px 18px 18px -1px;
+}
+
+.project_title ul {
+	list-style:none;
+	margin-left: 0px;
+	font-size: 10pt;
+}
+
+.project_title ul li {
+}
+
+.project_stats p {
+	font-size: 8pt;
+	text-shadow: none;
+	max-height: 60px;
+	width: 300px;
+	overflow: auto;
+}
+
+.project_stats description {
+	height:250px;
+	overflow: auto;
+}
+
+
+#push_status button {
+	margin-top: 18px;
+	margin-left: 10px;
+	width: 120px;
+	height: 50px;
+}
+
+#push_status textarea {
+	margin: 19px 0px 9px;
+	width: 315px;
+	height: 38px;
+}

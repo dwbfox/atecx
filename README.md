@@ -1,5 +1,11 @@
 #ATEC Experimental
 
+####8 November 2012
+* TimelineJS now implemented
+* A new controller parameter for project, (project/:id/timeline) now spits out JSON to be used by TimelineJS or exports
+* Users now can upload text only updates to their projects
+* Project page redesigned and now operational
+* Minor bug fixes
 
 ##Changelog
 ####7 November 2012

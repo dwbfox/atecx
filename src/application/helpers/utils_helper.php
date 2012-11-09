@@ -45,6 +45,16 @@ function is_logged_in()
 	}
 }
 
+function is_project_member($project_id)
+{
+	if (!is_logged_in()) {
+		return false;
+	}
+
+	$CI =& get_instance();
+	return $CI->projects_model->isUserMember($_SESSION['screen_name'],$project_id);
+}
+
 
 /**
  * Destroys all user session data and logs out the user

@@ -78,8 +78,7 @@ class Projects_model extends CI_Model {
 		if ($query->num_rows() <= 0) {
 			return false;
 		}
-
-		return $query->result();
+		return $query->row();
 	}
 
 	function getInterestingProjects($screen_name)
@@ -95,7 +94,7 @@ class Projects_model extends CI_Model {
 			return false;
 		}
 
-		return $query->result();
+		return ($query->result());
 	}
 
 	function getProjectInfoByScreename($screen_name) 
@@ -110,7 +109,6 @@ class Projects_model extends CI_Model {
 		if ($query->num_rows() <= 0) {
 			return false;
 		}
-
 		return $query->result();
 		
 	}
@@ -145,7 +143,7 @@ class Projects_model extends CI_Model {
 	{
 
 		$this->db->select('COUNT(member_id) as count');
-		$this->db->from('project_memebers');
+		$this->db->from('project_members');
 		$this->db->where('project_id',$project_id);
 		$query = $this->db->get();
 		$result = $query->row();
@@ -182,7 +180,7 @@ class Projects_model extends CI_Model {
 	function isUserMember($screen_name,$project_id)
 	{
 		$user_id = $this->user_model->getUserIDByScreename($screen_name);
-		$query = $this->db->get_where('project_memebers',array('user_id' => $user_id,'project_id' => $project_id));
+		$query = $this->db->get_where('project_members',array('user_id' => $user_id,'project_id' => $project_id));
 
 		if ($query->num_rows() > 0) {
 		 return true;

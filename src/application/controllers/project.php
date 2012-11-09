@@ -7,32 +7,106 @@ class Project extends CI_Controller {
 		redirect('/');
 	}
 
-	function view($project_id=null)
+
+
+	function view($project_id=null,$timeline=null)
 	{
 		// Invalid project. Redirect the user back to the front page
 		if ($project_id === null) {
 			redirect('/');
 		}
 
-		$content['project_info'] = $this->projects_model->getProjectInfoByID($project_id);
 
-		if (!$content['project_info']) {
+		$project_info = $this->projects_model->getProjectInfoByID($project_id);
+		if (!$project_info) {
 			// invalid project
 			redirect('/');
 		}
 
+
+		// we got a call to get the timeline
+		if ($timeline !== null)
+		{
+			
+			$this->load->model('milestones_model');
+			$milestones = $this->milestones_model->getTimelineByProjectID($project_id);
+			
+			// Build jsTimeline friendly JSON
+			$json['timeline'] = array();
+			$json['timeline']['headline'] = $project_info->project_name;
+			$json['timeline']['type'] = 'default';
+			$json['timeline']['text'] = $project_info->project_tagline;
+			$json['timeline']['startDate'] = str_replace('-',',',$project_info->project_start);
+			$json['timeline']['endDate'] = str_replace('-',',',$project_info->project_end);
+			$json['timeline']['asset']['media'] =  base_url() .  $project_info->project_image;
+			$json['timeline']['date'] = array();
+
+			if (!empty($milestones)) {
+				foreach ($milestones as $key => $milestone) {
+					$json['timeline']['date'][$key]['startDate'] = str_replace('-',',',$project_info->project_start);
+					$json['timeline']['date'][$key]['endDate'] = str_replace('-',',',$project_info->project_start);
+					$json['timeline']['date'][$key]['headline'] = $milestone->type;
+					$json['timeline']['date'][$key]['text'] = $milestone->comment;
+					$json['timeline']['date'][$key]['asset']['media'] = '';
+					$json['timeline']['date'][$key]['asset']['credit'] = $milestone->screen_name;
+					$json['timeline']['date'][$key]['asset']['caption'] = '';
+				}
+			}
+
+
+			echo json_encode($json);
+			return;
+		}
+
+		$content['project_info'] = $project_info;
+
+
 		$footer['js'] = array (
-			'view_timeline',
-			'storyjs-embed'
+			'storyjs-embed',
+			'view_timeline'
 		);
 
 		$header['$page_title'] = 'Project Page';
-		$header['css'] = array('project_page');
+		$header['css'] = array('project_page','timeline');
+
+		$content['project_id'] = $project_id;
+		$content['project_member_count'] = $this->projects_model->getMemeberCountForProject($project_id);
+		$content['project_info'] = $this->projects_model->getProjectInfoByID($project_id);;
+
+
+
 
 		$this->load->view('_template/header',$header);
 		$this->load->view('project_timeline_view',$content);
 		$this->load->view('_template/footer',$footer);
 
+
+	}
+
+	public function milestone()
+	{
+		if (!is_logged_in())
+		{
+			redirect('/');
+			exit();
+		}
+
+		// First check if the user filled out the necessary fields
+		if (!$this->input->post('update')) {
+			die("Please enter a project name, tagline, and/or an end date for your project.");
+		}
+
+		$milestoneData = array(
+			"comment" => $this->input->post('comment'),
+			"attachment" => '',
+			"user_id" => $_SESSION['user_id']
+		);
+
+		$this->load->model('milestones_model');
+
+		$result = $this->milestones_model->addNewMilestone($milestoneData);
+
+		var_dump($result);
 
 	}
 
