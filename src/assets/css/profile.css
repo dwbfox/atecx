@@ -16,12 +16,13 @@ h3:first {
 
 
 #sidebar {
-	min-width: 195px;
+	width: 184px;
 	background: #F7F7F7;
 	border-radius: 6px;
 	padding: 25px 0px 71px 27px;
 	border-left: 1px solid #ECECEC;
-	color: rgb(73, 54, 54);
+	color: #493636;
+	float: right;
 }
 
 #sidebar h2 {
@@ -29,6 +30,11 @@ h3:first {
 	font-size: 9pt;
 	padding-left: 21px;
 	background: #444;
+}
+
+#main_window {
+	width: 849px;
+	float: left;
 }
 
 #main_window h2 {
@@ -124,4 +130,13 @@ h3:first {
 .project-thumbnail-new h3 {
 	text-align: center;
 	color:#A2A2A2;
+}
+
+.project-thumbnail-new a:hover {
+	text-decoration: none;
+}
+
+#proficiencies p.label {
+	width: 149px;
+	text-align: center;
 }

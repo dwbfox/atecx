@@ -148,9 +148,9 @@ class User_model extends CI_Model
     
     /**
     *
-    * Gets the "user id" of the specified user
-    * @param [String] $screen_name a valid screen name
-    * @return [String] the id of the user on success, false on failure
+    * Gets the "oauth user id" of the specified user
+    * @param [int] $id a valid oauth_user_id
+    * @return [String] the screename of the user on success, false on failure
     */
     public function getScreenameByOAuthID($id)
     {
@@ -167,12 +167,34 @@ class User_model extends CI_Model
         return $data->screen_name;
     }
 
+    /**
+    *
+    * Gets the "user id" of the specified user
+    * @param [int] $id a valid user_id
+    * @return [String] the screename of the user on success, false on failure
+    */
+    public function getScreenameByUserID($id)
+    {
+    
+        $query = $this->db->get_where('users',array('user_id' => $id));
+
+        if ($query->num_rows() !== 1)
+        {
+            return false;
+        }
+
+        $data = $query->row();
+        $query->free_result();
+        return $data->screen_name;
+    }
+
     public function getProficiencyRoles($catagory)
     {
         $query = $this->db->get_where('prof_roles',array('prof_catagory' => $catagory));
         return $query->result();
     }
-    
+
+
     
     /**
      * Checks whether the user is a current member.

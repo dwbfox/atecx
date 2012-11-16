@@ -32,6 +32,8 @@ class Project extends CI_Controller {
 			$milestones = $this->milestones_model->getTimelineByProjectID($project_id);
 			
 			// Build jsTimeline friendly JSON
+			// This builds the section of the JSON that contains basic
+			// project information.
 			$json['timeline'] = array();
 			$json['timeline']['headline'] = $project_info->project_name;
 			$json['timeline']['type'] = 'default';
@@ -41,10 +43,11 @@ class Project extends CI_Controller {
 			$json['timeline']['asset']['media'] =  base_url() .  $project_info->project_image;
 			$json['timeline']['date'] = array();
 
+			// Check to see if there are any milestones in the database
 			if (!empty($milestones)) {
 				foreach ($milestones as $key => $milestone) {
-					$json['timeline']['date'][$key]['startDate'] = str_replace('-',',',$project_info->project_start);
-					$json['timeline']['date'][$key]['endDate'] = str_replace('-',',',$project_info->project_start);
+					$json['timeline']['date'][$key]['startDate'] = str_replace('-',',',$milestone->date);
+				$json['timeline']['date'][$key]['endDate'] = str_replace('-',',',$milestone->date);
 					$json['timeline']['date'][$key]['headline'] = $milestone->type;
 					$json['timeline']['date'][$key]['text'] = $milestone->comment;
 					$json['timeline']['date'][$key]['asset']['media'] = '';
@@ -53,12 +56,15 @@ class Project extends CI_Controller {
 				}
 			}
 
-
+			header("Content-type: application/json");
 			echo json_encode($json);
 			return;
-		}
+		} // end timeline generation
 
 		$content['project_info'] = $project_info;
+
+		$content['other_projects'] = $this->projects_model
+		->getProjectInfoByScreename($this->user_model->getScreenameByUserID($project_info->owner_id));
 
 
 		$footer['js'] = array (
@@ -66,14 +72,12 @@ class Project extends CI_Controller {
 			'view_timeline'
 		);
 
-		$header['$page_title'] = 'Project Page';
+		$header['$page_title'] = $project_info->project_name;
 		$header['css'] = array('project_page','timeline');
 
 		$content['project_id'] = $project_id;
-		$content['project_member_count'] = $this->projects_model->getMemeberCountForProject($project_id);
+		$content['project_member_count'] = $this->projects_model->getMemberCountForProject($project_id);
 		$content['project_info'] = $this->projects_model->getProjectInfoByID($project_id);;
-
-
 
 
 		$this->load->view('_template/header',$header);
@@ -83,30 +87,84 @@ class Project extends CI_Controller {
 
 	}
 
+	public function join($project_id) 
+	{
+
+		// The user is trying to join a project. First, let's make sure they're ATECX members
+		if (!is_logged_in())
+		{
+			redirect('/');
+		}
+
+		// TODO -- Dag 2.0, this is where you add the logic to
+		//  send an email to the owner of the project
+		// to let them know that the user is trying to join the project.
+
+
+		// TODO -- Make sure to implement a role system in the project.
+		// The projects table has a column called role_id that will
+		// define the user's role in the project (e.g. Sound Designer, rigger, modeler, etc.)
+
+		// Check to see if the user is already a member
+		if ($this->projects_model->isUserMember($_SESSION['screen_name'],$project_id))
+		{
+			// They are. Send them to the project page
+			redirect('project/view/' . $project_id);
+		}
+
+		// The user is not a member of this project, so let's add them
+		$result = $this->projects_model->addMemberToProject($_SESSION['user_id'],$project_id,2); //2 = the role id, which isn't defined 
+
+
+		if (!$result)
+		{
+			// better error handling should be here
+			die("Unable to add user into the project.");
+		}
+
+		// The user has been successfully added into the project. Send them back to the projects page
+		redirect('project/view/' . $project_id);
+	}
+
+	public function part($project_id)
+	{
+
+		// The user is trying to join a project. First, let's make sure they're ATECX members
+		if (!is_logged_in())
+		{
+			redirect('/');
+		}
+
+		$this->projects_model->deleteUserFromProject($_SESSION['screen_name'],$project_id);
+
+		redirect('project/view/' . $project_id);
+
+
+	}
+
 	public function milestone()
 	{
 		if (!is_logged_in())
 		{
-			redirect('/');
-			exit();
+			die("Not logged in.");
 		}
+
 
 		// First check if the user filled out the necessary fields
 		if (!$this->input->post('update')) {
-			die("Please enter a project name, tagline, and/or an end date for your project.");
+			die("No updates pushed.");
 		}
 
 		$milestoneData = array(
-			"comment" => $this->input->post('comment'),
+			"comment" => $this->input->post('update'),
 			"attachment" => '',
-			"user_id" => $_SESSION['user_id']
+			"user_id" => $_SESSION['user_id'],
+			"project_id" => $this->input->post('project_id')
 		);
 
 		$this->load->model('milestones_model');
 
 		$result = $this->milestones_model->addNewMilestone($milestoneData);
-
-		var_dump($result);
 
 	}
 
@@ -121,8 +179,9 @@ class Project extends CI_Controller {
 		// First check if the user filled out the necessary fields
 		if (!$this->input->post('project_name') || 
 			!$this->input->post('project_tagline') ||
+			!$this->input->post('project_catagory') ||
 			!$this->input->post('project_end')) {
-			die("Please enter a project name, tagline, and/or an end date for your project.");
+			die("Please enter a project name, catagory, tagline, and/or an end date for your project.");
 		}
 
 		// Set up our array to be delivered to our model
@@ -131,6 +190,7 @@ class Project extends CI_Controller {
 			'project_name' => $this->input->post('project_name'),
 			'owner_id' => $this->user_model->getUserIDByScreename($_SESSION['screen_name']),
 			'project_image' => '',
+			'project_catagory' => $this->input->post('project_catagory'),
 			'project_end' => $this->input->post('project_end'),
 			'project_tagline'  => $this->input->post('project_tagline'),
 			'project_description' => ($this->input->post('project_description')) ? $this->input->post('project_description') : 'No description available.'

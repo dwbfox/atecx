@@ -4,6 +4,17 @@
   
 ##Changelog
 
+####15 November 2012
+* Users can now join and part projects
+* Fixed a bug where the project end date was not being set into the database
+* Changed the database schemas so that various user_id columns are now FK to the users table, ATECX.sql updated to reflect the changes
+* Projects are now catagorized under three catagories, which the user will have the option of choosing from
+when first creating a project.
+* Removed Bootstrap.min.css from header.php as there was currently no need for it
+* Project duration is shown in the project page, along with the number of days left before launch
+* Other projects by the user are shown in the bottom of the project page
+
+
 ####8 November 2012
 * TimelineJS now implemented
 * A new controller parameter for project, (project/:id/timeline) now spits out JSON to be used by TimelineJS or exports
@@ -37,8 +48,9 @@ now used to handle login/logout process
 
 
 ##Deployment Guide
-Assuming you have MySQL, PHP ( +cURL), and Apache setup, you'll need to edit the following files
-in order to get ATEC up and running in your environment.
+#### Requirements
+* PHP 5.2+ with cURL+, Apache with mod_rewrite, MySQL.
+* Codeigniter 2.1.3 (included)
 
 
 0) Import the SQL file located in the root of the project (atecx.sql). This will set up the database
@@ -58,3 +70,10 @@ refelct your database setup:
 ```php
 define('CALLBACK_URL','http://example.com/atecx/callback'); // the callback URL for Twitter's OAuth
 ```
+
+## Upgrading Codeigniter
+Codeigniter's modular nature allows it to be upgraded without affecting the user application. The core
+components of ATECX ( with the exception of assets/  and appData/ directory) are all stored in the applications
+directory
+
+Assuming the future versions of Codeigniter will be backwards compatible with 2.1.3, you can download the latest stable release and simply replace the system/ directory with the newer version. 

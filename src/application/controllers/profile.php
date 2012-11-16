@@ -43,7 +43,6 @@ class Profile extends CI_Controller {
 
 		// Get information about the user from our model and pass it to the profile view
 		$num_projects = $this->projects_model->getProjectCountForUser($screen_name);
-		$watch_list = '0';
 		$profs = $this->user_model->getUserProficiencies($screen_name);
 		$project_tiles = $this->projects_model->getProjectInfoByScreename($screen_name);
 		
@@ -51,7 +50,6 @@ class Profile extends CI_Controller {
 			'bio' => $user_info['bio'],
 			'project_tiles' => $project_tiles,
 			'screen_name' => $screen_name,
-			'num_watched' => 0,
 			'num_projects' => $num_projects,
 			'join_date' => $user_info['join_date'],
 			'profs' => $profs

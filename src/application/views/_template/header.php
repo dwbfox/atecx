@@ -4,7 +4,6 @@
 	<title><?php echo isset($page_title) ? $page_title . ' - ' . SITE_NAME  : SITE_NAME; ?></title>
 	<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/bootstrap/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/css/ui-lightness/jquery-ui-1.8.23.custom.css">
 	<link rel="styylesheet" type="text/css" href="<?php echo asset_url(); ?>/fontAwesome/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo asset_url(); ?>/fontAwesome/font-awesome.css">
@@ -47,6 +46,7 @@
 		    	 <li><a href="<?php echo base_url() .'project/create'; ?>" ><i class="icon-star"></i>Create a Project</a></li>
 	    	     <li class="divider"></li>
 		    	 <li><a href="<?php echo base_url() .'profile/' . $_SESSION['screen_name']; ?>" ><i class="icon-user"></i>Dashboard</a></li>
+		    	 <li><a href="<?php echo base_url() .'profile/' . $_SESSION['screen_name'] . '#settings'; ?>" ><i class="icon-wrench"></i>Settings</a></li>
 		    	 <li><a href="<?php echo base_url() .'auth/logout'; ?>"><i class="icon-unlock"></i>Sign out</a></li>
 			  </ul>
 			</div>

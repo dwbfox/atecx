@@ -12,7 +12,7 @@ class Milestones_model extends CI_Model {
 		$data = array('date' => $date,
 					  'comment' => $milestoneData['comment'],
 					  'attachment' => $milestoneData['attachment'],
-					  'user_id' => $milestoneData['user_id']
+					  'user_id' => $milestoneData['user_id'],
 					  'project_id' => $milestoneData['project_id']
   		);
 

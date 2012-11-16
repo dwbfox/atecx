@@ -1,0 +1,1008 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"projects",
+				"projects_model"
+			],
+			[
+				"project_",
+				"project_members"
+			],
+			[
+				"modl",
+				"models"
+			],
+			[
+				"submit",
+				"submitButton"
+			],
+			[
+				"project",
+				"project_id"
+			],
+			[
+				"mil",
+				"milestoneData"
+			],
+			[
+				"milest",
+				"milestones_model"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"proj",
+				"project_info"
+			],
+			[
+				"proje",
+				"project_stats"
+			],
+			[
+				"progres",
+				"progress_step1"
+			],
+			[
+				"prof_",
+				"prof_list"
+			],
+			[
+				"profic",
+				"proficiency-slider"
+			],
+			[
+				"profi",
+				"profile"
+			],
+			[
+				"player",
+				"player_count"
+			],
+			[
+				"projec",
+				"project_info"
+			],
+			[
+				"pro",
+				"proficiencies"
+			],
+			[
+				"num",
+				"num_rows"
+			],
+			[
+				"getuse",
+				"getUserIDByScreename"
+			],
+			[
+				"screen",
+				"screen_name"
+			],
+			[
+				"sc",
+				"screen_name"
+			],
+			[
+				"backg",
+				"background"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/application/views/create_project_view.php",
+			"settings":
+			{
+				"buffer_size": 1509,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/application/controllers/project.php",
+			"settings":
+			{
+				"buffer_size": 8856,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/application/models/projects_model.php",
+			"settings":
+			{
+				"buffer_size": 5905,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/application/models/milestones_model.php",
+			"settings":
+			{
+				"buffer_size": 984,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/assets/js/create_project.js",
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3806,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/assets/css/project_page.css",
+			"settings":
+			{
+				"buffer_size": 1666,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/application/views/project_timeline_view.php",
+			"settings":
+			{
+				"buffer_size": 3663,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"package l",
+				"Package Control: List Packages"
+			],
+			[
+				"package inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"REMOVE",
+				"Package Control: Remove Package"
+			],
+			[
+				"TIDY",
+				"Tidy PHP"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"php",
+				"Format: Php"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package con",
+				"Package Control: List Packages"
+			],
+			[
+				"Package install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"ab",
+				"About"
+			],
+			[
+				"set syntax: PHP",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 118.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/server/www/atecx/src/application/views/_template/header.php",
+		"/C/server/www/atecx/src/application/views/project_timeline_view.php",
+		"/C/server/www/atecx/src/assets/css/main.css",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/server/www/todo/readme.md",
+		"/C/server/www/todo/application/config/routes.php",
+		"/C/server/www/todo/docs/requirements",
+		"/C/server/www/todo/application/routes.php",
+		"/C/server/www/todo/public/index.php",
+		"/C/server/www/todo/application/controllers/home.php",
+		"/C/server/www/todo/application/controllers/welcome.php",
+		"/C/server/www/todo/paths.php",
+		"/C/server/www/todo/public/.htaccess",
+		"/C/server/www/todo/application/config/application.php",
+		"/C/server/www/todo/application/config/database.php",
+		"/C/server/www/atecx/atecx.sublime-project",
+		"/C/server/www/atecx/atecx.sublime-workspace",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/footer.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/database.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/config.php",
+		"/C/server/www/lcguildrank4/assets/js/script.js",
+		"/C/server/www/atecx/src/application/models/projects_model.php",
+		"/C/server/www/atecx/src/assets/css/project_page.css",
+		"/C/server/www/atecx/src/assets/css/header.css",
+		"/C/server/www/atecx/src/assets/css/profile.css",
+		"/C/server/www/atecx/src/application/views/profile_view.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/project_timeline_view.php",
+		"/C/server/www/atecx/src/assets/js/view_timeline.js",
+		"/C/server/www/atecx/src/application/models/user_model.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/install.php.1047",
+		"/C/server/www/atecx/src/application/controllers/project.php",
+		"/C/server/www/atecx/src/application/controllers/profile.php",
+		"/C/server/www/atecx/src/application/helpers/utils_helper.php",
+		"/C/server/www/atecx/src/application/models/milestones_model.php",
+		"/C/server/www/atecx/src/assets/js/profile.js",
+		"/C/server/www/atecx/src/assets/js/create_project.js",
+		"/C/server/www/atecx/src/application/views/create_project_view.php",
+		"/C/server/www/atecx/src/application/controllers/account.php",
+		"/C/server/www/atecx/src/application/views/home_view.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/install.php.11462",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/install.php.11459",
+		"/C/server/www/nearcrime/app/check.php",
+		"/C/server/www/nearcrime/README.md",
+		"/C/server/www/nearcrime/app/Model/Post.php",
+		"/C/server/www/nearcrime/app/Controller/PostsController.php",
+		"/C/server/www/nearcrime/app/View/Posts/index.ctp",
+		"/C/server/www/nearcrime/app/Config/database.php",
+		"/C/server/www/nearcrime/app/View/Pages/home.ctp",
+		"/C/server/www/nearcrime/app/webroot/index.php",
+		"/C/server/www/nearcrime/app/Config/core.php",
+		"/C/Users/Fujitsu/AppData/Local/Temp/7zE1F1B.tmp/database.php.default",
+		"/C/server/www/nearcrime/app/Config/database.php.default",
+		"/C/server/www/crimestats/crimestats/settings.py",
+		"/C/server/www/crimestats/nearcrime/models.py",
+		"/C/server/www/crimestats/crimestats/urls.py",
+		"/C/server/www/crimestats/crimestats/views.py",
+		"/C/server/www/crimestats/nearcrime/views.py",
+		"/C/server/www/crimestats/dpd/admin.py",
+		"/C/server/www/crimestats/manage.py",
+		"/C/server/www/blog/dsb/views.py",
+		"/C/server/www/blog/manage.py",
+		"/C/server/www/blog/dsb/models.py",
+		"/C/server/www/blogsrc/templates/blog/bbase.html",
+		"/C/server/www/blog/blog/settings.py",
+		"/C/server/www/blogsrc/templates/blog/.list.html.swp",
+		"/C/server/www/blog/blog_db",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/utils_helper.php",
+		"/C/server/www/atecx/ATECX.sql",
+		"/C/Users/Fujitsu/Desktop/youtube.py",
+		"/C/server/www/atecx/README.md",
+		"/C/server/www/atecx/src/assets/js/signup.js",
+		"/C/server/www/atecx/src/assets/example_json.json",
+		"/C/server/www/atecx/src/system/libraries/Unit_test.php",
+		"/C/server/www/atecx/src/system/libraries/Form_validation.php",
+		"/C/server/www/atecx/src/assets/css/screen.css",
+		"/E/ATEC X/atecx/src/application/views/project_timeline_view.php",
+		"/C/server/www/atecx/atecx.sql",
+		"/C/Users/Fujitsu/Desktop/Dagmawi_45_data.xml",
+		"/C/server/www/atecx/src/application/controllers/auth.php",
+		"/C/server/www/atecx/src/application/views/signup_view.php",
+		"/C/server/www/atecx/src/application/controllers/signup.php",
+		"/C/server/www/atecx/src/assets/css/signup.css",
+		"/C/server/www/atecx/src/assets/css/create_project.css",
+		"/C/Users/Fujitsu/AppData/Roaming/Sublime Text 2/Packages/phpDocumentor/README.md",
+		"/C/Users/Fujitsu/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/phpDocumentor2-develop/README.md",
+		"/C/Users/Fujitsu/Desktop/HTML5-Matrix-Code-Rain-master/HTML5-Matrix-Code-Rain-master/matrixtext.js",
+		"/C/Users/Fujitsu/AppData/Roaming/Sublime Text 2/Packages/JsFormat/Default (Windows).sublime-keymap",
+		"/C/Users/Fujitsu/AppData/Roaming/Sublime Text 2/Packages/JsFormat/JsFormat.sublime-settings",
+		"/C/Users/Fujitsu/Desktop/GDatatest.py",
+		"/C/server/www/atecx/src/application/controllers/main.php",
+		"/C/Users/Fujitsu/Desktop/app_tester_acc__data.xml",
+		"/C/server/www/atecx/src/application/helpers/twitter_helper.php",
+		"/C/Users/Fujitsu/Desktop/Reddit Notifier/app.js",
+		"/C/Users/Fujitsu/Desktop/Reddit Notifier/index.html",
+		"/C/Users/Fujitsu/Desktop/Reddit Notifier/manifest.json",
+		"/C/server/www/crimestats/dpd/models.py",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/user_helper.php",
+		"/C/Users/Fujitsu/Desktop/jdk1.7.0_09/sample/forkjoin/mergesort/MergeDemo.java",
+		"/C/Users/Fujitsu/Desktop/jdk1.7.0_09/sample/webservices/EbayClient/eBaySvc.wsdl",
+		"/C/server/www/atecx/src/assets/css/home.css",
+		"/C/server/www/atecx/src/application/views/_template/footer.php",
+		"/C/server/www/atecx/src/assets/css/timeline.png",
+		"/C/server/www/atecx/src/assets/css/timeline.css",
+		"/C/Users/Fujitsu/Desktop/VeriteCo-TimelineJS-a89ae22/examples/example_json.json",
+		"/C/Users/Fujitsu/Desktop/VeriteCo-TimelineJS-a89ae22/examples/example_json.html",
+		"/C/Users/Fujitsu/Desktop/VeriteCo-TimelineJS-a89ae22/examples/example_jquery_load.html",
+		"/C/Users/Fujitsu/Documents/Visual Studio 2010/Projects/Item Mall Scraper/Item Mall Scraper/bin/Release/HtmlAgilityPack.xml",
+		"/C/Users/Fujitsu/Desktop/get_video_info (1)",
+		"/C/Users/Fujitsu/Desktop/test.html",
+		"/C/Users/Fujitsu/Desktop/test.txt",
+		"/C/server/www/lcguildrank4/application/controllers/update.php",
+		"/C/server/www/lcguildrank4/sitemap.xml",
+		"/C/Users/Fujitsu/Desktop/get_video_info",
+		"/C/Users/Fujitsu/Desktop/Home.download",
+		"/C/server/www/lcguildrank4/application/libraries/Parser.php",
+		"/C/server/www/lcguildrank4/application/controllers/ranks.php",
+		"/C/server/www/lcguildrank4/application/views/_templates/footer.php",
+		"/C/server/www/lcguildrank4/application/controllers/info.php",
+		"/C/server/www/lcguildrank4/application/.htaccess",
+		"/C/Users/Fujitsu/AppData/Local/Temp/fz3temp-1/database 2.php",
+		"/C/Users/Fujitsu/Desktop/sitemap.xml",
+		"/C/server/www/lcguildrank4/robots.txt",
+		"/C/server/www/lcguildrank4/application/controllers/search.php",
+		"/C/server/www/lcguildrank4/application/controllers/pages.php",
+		"/C/server/www/lcguildrank4/application/views/_templates/header.php",
+		"/C/server/www/lcguildrank4/assets/css/style.css",
+		"/C/server/www/DSB/DSB/urls.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new DateTime(",
+			"die",
+			"());\n",
+			">\n",
+			"push",
+			"count",
+			"footer",
+			"project_roles",
+			"project_",
+			"project_roles",
+			"role",
+			"byscreen",
+			"');\n",
+			"date",
+			"[]",
+			"'],\n",
+			">\n",
+			"\n}",
+			"());\n",
+			">\n",
+			"				\n",
+			"- ",
+			"progress_step1",
+			"addClass",
+			"Beginner",
+			"interactive",
+			"proficiency",
+			"function",
+			"<?",
+			"N/A",
+			"label-info",
+			"proficiency",
+			">\n",
+			"s = [\n			(\"Location Information\",\n				{\n				\"fields\":[\"Location\",\"Division\",\"Beat\",\"Reporting Area\"]\n				}\n			),\n			(\"Crime Information\",\n				{\n				\"fields\":[\"Incidnet #\",\"Priority\",\"Date\",\"Nature of the crime\"]\n				})\n		]\n",
+			">\n",
+			"main",
+			"layout",
+			"mygraphv",
+			"gv",
+			"gr.",
+			"gr",
+			"getProjectInfoAssoc",
+			"image/png",
+			"size",
+			"This project is the best project ever!",
+			"		\n",
+			");\n",
+			"			\n",
+			"\n",
+			"\">\n",
+			"help",
+			"error"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/application/views/create_project_view.php",
+					"settings":
+					{
+						"buffer_size": 1509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 120.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/application/controllers/project.php",
+					"settings":
+					{
+						"buffer_size": 8856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2977,
+								2977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 910.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/application/models/projects_model.php",
+					"settings":
+					{
+						"buffer_size": 5905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5856,
+								5856
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3609.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/application/models/milestones_model.php",
+					"settings":
+					{
+						"buffer_size": 984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/assets/js/create_project.js",
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 3806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/assets/css/project_page.css",
+					"settings":
+					{
+						"buffer_size": 1666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								868,
+								868
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 932.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/application/views/project_timeline_view.php",
+					"settings":
+					{
+						"buffer_size": 3663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1146,
+								1146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 151.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.phpdocumentor":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"project",
+				"src/assets/css/project_page.css"
+			],
+			[
+				"projectcss",
+				"src/assets/css/project_page.css"
+			],
+			[
+				"header",
+				"src/application/views/_template/header.php"
+			],
+			[
+				"mile",
+				"src/application/models/milestones_model.php"
+			],
+			[
+				"create_pr",
+				"src/assets/js/create_project.js"
+			],
+			[
+				"projectview",
+				"src/application/views/project_timeline_view.php"
+			],
+			[
+				"main",
+				"src/assets/css/main.css"
+			],
+			[
+				"create_p",
+				"src/application/views/create_project_view.php"
+			],
+			[
+				"user_mo",
+				"src/application/models/user_model.php"
+			],
+			[
+				"project_mod",
+				"src/application/models/projects_model.php"
+			],
+			[
+				"pri",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"timelinejs",
+				"src/assets/js/view_timeline.js"
+			],
+			[
+				"profile",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"uti",
+				"src/application/helpers/utils_helper.php"
+			],
+			[
+				"prof",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"profile_v",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"profie",
+				"src/application/controllers/profile.php"
+			],
+			[
+				"user_mode",
+				"src/application/models/user_model.php"
+			],
+			[
+				"project_mo",
+				"src/application/models/projects_model.php"
+			],
+			[
+				"proje",
+				"src/application/models/projects_model.php"
+			],
+			[
+				"util",
+				"src/application/helpers/utils_helper.php"
+			],
+			[
+				"page",
+				"src/assets/css/project_page.css"
+			],
+			[
+				"viewtime",
+				"src/application/views/project_timeline_view.php"
+			],
+			[
+				"timeline",
+				"src/assets/js/view_timeline.js"
+			],
+			[
+				"home",
+				"src/application/views/home_view.php"
+			],
+			[
+				"account",
+				"src/application/controllers/account.php"
+			],
+			[
+				"create",
+				"src/assets/js/create_project.js"
+			],
+			[
+				"user",
+				"src/application/models/user_model.php"
+			],
+			[
+				"profi",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"pro",
+				"src/assets/js/profile.js"
+			],
+			[
+				"header.",
+				"src/application/views/_template/header.php"
+			],
+			[
+				"milestone",
+				"src/application/models/milestones_model.php"
+			],
+			[
+				"project_",
+				"src/application/views/project_timeline_view.php"
+			],
+			[
+				"view",
+				"src/application/views/project_timeline_view.php"
+			],
+			[
+				"view_",
+				"src/assets/js/view_timeline.js"
+			],
+			[
+				"_templa",
+				"src/application/views/_template/header.php"
+			],
+			[
+				"signup",
+				"src/assets/js/signup.js"
+			],
+			[
+				"pmodel",
+				"src/application/models/milestones_model.php"
+			],
+			[
+				"project_cs",
+				"src/assets/css/project_page.css"
+			],
+			[
+				"main.cs",
+				"src/assets/css/main.css"
+			],
+			[
+				"projec",
+				"src/application/controllers/project.php"
+			],
+			[
+				"projects_mo",
+				"src/application/models/projects_model.php"
+			],
+			[
+				"project_page",
+				"src/assets/css/project_page.css"
+			],
+			[
+				"scre",
+				"src/assets/css/screen.css"
+			],
+			[
+				"view_tim",
+				"src/assets/js/view_timeline.js"
+			],
+			[
+				"sign",
+				"src/assets/js/signup.js"
+			],
+			[
+				"auth",
+				"src/application/controllers/auth.php"
+			],
+			[
+				"project.",
+				"src/application/controllers/project.php"
+			],
+			[
+				"create_",
+				"src/assets/js/create_project.js"
+			],
+			[
+				"main.css",
+				"src/assets/css/main.css"
+			],
+			[
+				"profile.css",
+				"src/assets/css/profile.css"
+			],
+			[
+				"profile_vi",
+				"src/application/views/profile_view.php"
+			],
+			[
+				"signup_v",
+				"src/application/views/signup_view.php"
+			],
+			[
+				"signup.cs",
+				"src/assets/css/signup.css"
+			],
+			[
+				"signu",
+				"src/assets/js/signup.js"
+			],
+			[
+				"home_vi",
+				"src/application/views/home_view.php"
+			],
+			[
+				"signup.js",
+				"src/assets/js/signup.js"
+			],
+			[
+				"usermo",
+				"src/application/models/user_model.php"
+			],
+			[
+				"usermod",
+				"src/application/models/user_model.php"
+			],
+			[
+				"",
+				"atecx/atecx.sql"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/server/www/atecx/atecx.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true
+}

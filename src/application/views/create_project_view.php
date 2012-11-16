@@ -6,6 +6,16 @@
 		<div class="control-group">
 			<label>Name your project</label>
 		 	<input type="text" name="project_name" required="" />
+
+		 </div>
+
+		 <div class="control-group">
+		 	<label>What catagory does your project fall into?</label>
+ 		 	<select name="project_catagory">
+	 			<option value="Animation">Animation</option>
+		 		<option value="Game Design">Game Design</option>
+		 		<option value="Intreactive">Web/Interactive</option>
+		 	</select>
 		 </div>
 
 		<div class="control-group">

@@ -2,7 +2,7 @@
 	<div class="content">
 		<div class="container">
 			<h1><i class="icon-user"></i> <?php echo is_logged_in() ? 'Dashboard':$profile['screen_name'] .'\'s profile'; ?></h1>
-			<div id="main_window" class="span8">
+			<div id="main_window" class="">
 				<ul class="nav nav-tabs" id="profile_menu">
 				  <li><a class="active" href="#projects"><i class="icon-briefcase"></i> Projects</a></li>
 				  <li><a href="#proficiencies"><i class="icon-tasks"></i> Skills and Proficiencies</a></li>
@@ -17,14 +17,15 @@
 					<div class="">
 						<ul class="thumbnails">
 						<?php if($profile['num_projects'] == '0'):?>
-							<li>
+							<li class="pull-left">
 								<a href="<?php echo base_url() . 'project/create'; ?>">
 									<div class="project-thumbnail thumbnail project-thumbnail-new">
 										<i class="icon-plus-sign"></i>
 										<h3>Create a Project</h3>
 							   		</div>	
 						   		</a>
-						   	</li>						<?php else: ?>
+						   	</li>						
+						   <?php else: ?>
 
 							<?php foreach ($profile['project_tiles']  as $project): ?>
 							  <li>
@@ -33,7 +34,7 @@
  							      	<img src="<?php echo base_url() .  $project->project_image_thumb;?>" alt="">
  							      </a>
 							      <h3><?php echo $project->project_name; ?></h3> 
-							      <small><?php echo anchor('profile/' .  $project->screen_name,$project->screen_name); ?></small>
+							      <small><?php echo anchor('profile/' .  $project->owner_screename,$project->owner_screename); ?></small>
 							      <p class="project-thumbnail-tagline"><?php echo $project->project_tagline; ?></p>
 							    </div>
 							  </li>
@@ -77,6 +78,12 @@
 				  </div>
 				  <div class="tab-pane" id="settings">
 					<h3>Settings</h3>
+						<div class="info">
+							<a class="btn btn-success" href="<?php echo base_url() . 'auth/liberateData'; ?>">Liberate your data</a>
+						</div>
+						<div class="info">
+							<a class="btn btn-danger" href="<?php echo base_url() . 'account/delete';?>">Delete account</a>
+						</div>
 				  </div>
 				</div>
 			</div>
@@ -85,12 +92,9 @@
 
 			<!--END OF TABS -->
 
-			<div id="sidebar" class="pull-right span2">
+			<div id="sidebar" class="">
 				<div id="user_info">
 					<div id="info1">
-						<div class="span2 avatar">
-							<img src="<?php echo twitter_profile_image($_SESSION['oauth_user_id'],'bigger'); ?>" alt="Profile Image"  />
-						</div>
 						<ul>
 							<li>Joined <?php echo $profile['join_date']; ?></li>
 						</ul>
@@ -99,13 +103,7 @@
 					<div class="info">
 						<div class="stat">
 							<h3 class="stat-title"><?php echo $profile['num_projects']; ?></h3>
-							<span class="stat-verb">projects started</span>
-						</div>
-					</div>
-					<div class="info">
-						<div class="stat">
-							<h3 class="stat-title"><?php echo $profile['num_watched']; ?></h3>
-							<span class="stat-verb">projects watched</span>
+							<span class="stat-verb">projects</span>
 						</div>
 					</div>
 				</div>
@@ -114,12 +112,6 @@
 				<div id="account_control">	
 					<div class="info">
 						<a class="btn btn-info" href="<?php echo base_url() . 'project/create'; ?>">Create a project</a>
-					</div>
-					<div class="info">
-						<a class="btn btn-success" href="<?php echo base_url() . 'auth/liberateData'; ?>">Liberate your data</a>
-					</div>
-					<div class="info">
-						<a class="btn btn-danger" href="<?php echo base_url() . 'account/delete';?>">Delete account</a>
 					</div>
 				</div>
 				<?php endif; ?>

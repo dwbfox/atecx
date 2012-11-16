@@ -54,7 +54,7 @@ h1 {
 
 /* THUMNNAILS */
 .project-thumbnail {
-	background: #F7F7F7;
+	background: #F8F8F8 !important;
 	height: 246px;
 	box-shadow: 1px 2px 3px rgb(116, 116, 116);
 	width: 184px;
@@ -80,7 +80,7 @@ h1 {
 	overflow: hidden;
 	font-size: 9pt !important;
 	height: 54px;
-	background: #E0E0E0;
+	background: #FFFFFF;
 }
 
 
