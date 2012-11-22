@@ -3,6 +3,13 @@
 
   
 ##Changelog
+####19 November 2012
+* Fixed sign in bug causing malformed requests to the account/create method
+* Fixed an issue with 
+
+####17 November 2012
+* Fixed a bug where project images were failing to upload
+* Users are now required to upload an image for their project
 
 ####15 November 2012
 * Users can now join and part projects
@@ -53,10 +60,10 @@ now used to handle login/logout process
 * Codeigniter 2.1.3 (included)
 
 
-0) Import the SQL file located in the root of the project (atecx.sql). This will set up the database
+1. Import the SQL file located in the root of the project (atecx.sql). This will set up the database
 structure ATECX needs.
 
-1) Navigate to /src/application/config/database.php and change following lines to properly 
+2. Navigate to /src/application/config/database.php and change following lines to properly 
 refelct your database setup:
 ```php
 	$db['default']['hostname'] = 'localhost';
@@ -66,10 +73,114 @@ refelct your database setup:
 	$db['default']['dbdriver'] = 'mysql';
 ```			
 			
-2) Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct callback URL for Twitter:
+3. Navigate to /src/application/helpers/utils_helper.php and edit the following line to point it to the correct callback URL for Twitter:
 ```php
 define('CALLBACK_URL','http://example.com/atecx/callback'); // the callback URL for Twitter's OAuth
 ```
+
+
+##Tutorial: Extending the functionalities of ATECX
+
+###Adding a new "stats" page
+Even if you're not familiar with Codeigniter, extending the functionality of ATECX should be very, very simple to undertake. Say you want to to create a page to display site stats like the number of users there are in ATECX. Following the principles of the MVC pattern, this could be accomplished by a few easy steps.
+
+1. First off, let's create a method in our `user_model` located in `application/models/user_model.php`. This method will
+tap into the database to retrieve the number of users our app has that will ultimately be displayed to the user.
+	```php
+	/* application/models/user_model.php */
+
+	/* ... */
+
+	function getMemberCount()
+	{
+		// Build a query to count the number of people using ATECX
+		$this->db->select("COUNT(user_id) as numUsers");
+		$this->db->from('users');
+
+		// execute the query
+		$query = $this->db->get();
+		
+		// uh oh, something went wrong
+		if ($query->num_rows() <= 0)
+		{
+			return false;
+		}
+
+		// We have the count, return it!
+		$result = $query->row();
+		return $result->numUsers;		
+	}
+	```
+
+3. Next, create a controller for the "stats" page. To do this, create a file called `stats.php`
+file in the `application/controllers` directory. In this controller, we will create one method called "users" that
+will display the number of users/members in ATECX:
+
+	```php
+	/* application/controllers/stats.php */
+	<?php
+	
+	
+	class Stats extends CI_Controller {
+
+			public function users()
+			{
+				// Get the requested data from our model
+				$numUsers = $this->User_model->getMemberCount();
+
+				// Build our view. We will attach two files from our /assets directroy
+				// that will customize the look and functionality of our view
+
+				// Attach a css called status.css to our view
+				$header['css'] = array('stats');
+
+				// Attach a js called status.js to our view
+				$footer['js'] = array('stats');
+
+				// Attach view-specific content
+				$content['numUsers'] = $numUsers;
+
+				// Now begin loading our view
+				$this->load->view('_template/header',$header);
+				$this->load->view('status_view',$content);
+				$this->load->view('_template/viewer',$footer);
+
+				
+			}
+		}
+	?>
+	```
+Codeigniter will automatically route `stats/users` to the method we just created. That is, if the user navigates to  `http://atecxexample.com/stats/users`, the method we just created would be executed! However, if 
+you feel comfortable with Codeigniter, you can head on to `application/config/routes.php` to set up custom routes to
+this controller. It's all up to you. For more information about routing, check out this link: http://codeigniter.com/user_guide/general/routing.html
+
+3. Next, we'll create our view. The view will be responsible for  presenting the data retrieved to the user in a friendly format. The view does not have access to any assets in the model other than what was supplied to it 
+from the controller we created. Create a file called `status_view.php` under `application/views/`. Listen up! Naming conventions matter in Codeigniter. Go back to step two and examine the following line:
+```php 
+$this->load->view('status_view',$content);
+```
+When this is called, Codeigniter will automatically search for a file called `status_vew` in `application/views/`. Expect to run into errors if you neglect to maintain a consistent name the view and the controller. You'll also want to create `css` and `js` files named `stats` and put them under the `/assets/js` and `/assets/css` folders respectively. They'll be automatically attached to the header and footer as our controller builds the view.
+
+Back on `status_view.php`, we'll add some required HTML markup:
+```HTML
+<div id="content">
+	<div class="content">
+		<!-- STUFF GOES HERE -->
+	</div>
+</div>
+```
+
+All of the views in ATECX begin with the format above. All of the method specific code, in this case the number of users to be displayed to the user, will go under the `<div class="content">` element:
+
+```HTML
+<div id="content">
+	<div class="content">
+		<h1><?php echo $numUsers; ?></h1>
+	</div>
+</div>
+```
+
+
 
 ## Upgrading Codeigniter
 Codeigniter's modular nature allows it to be upgraded without affecting the user application. The core
