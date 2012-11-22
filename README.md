@@ -175,10 +175,15 @@ All of the views in ATECX begin with the format above. All of the method specifi
 ```HTML
 <div id="content">
 	<div class="content">
-		<h1><?php echo $numUsers; ?></h1>
+		<h1>User Stats</h1>
+
+		<p>There are <?php echo $numUsers; ?> users in ATEC Experimental</p>
 	</div>
 </div>
 ```
+Confused as to how `$numUsers` got into our view? In step two, we created an associative array  called `$content` and supplied
+the number of users retrieved from the database into `$content['numUsers']`. This was subsequently passed on to our view and turned
+into a variable for us. This is how Codeigniter facilitates data transfer between the controller and the view in an MVC app.
 
 And that's all there is to it! To recap, as soon as the user naviates to `http://.../stats/users`, the routing engine
 will the users `users()` method. The `users()` method will in turn call our model called `users_model` and retrieve the number of 
