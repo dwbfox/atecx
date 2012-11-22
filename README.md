@@ -185,10 +185,12 @@ Confused as to how `$numUsers` got into our view? In step two, we created an ass
 the number of users retrieved from the database into `$content['numUsers']`. This was subsequently passed on to our view and turned
 into a variable for us. This is how Codeigniter facilitates data transfer between the controller and the view in an MVC app.
 
-And that's all there is to it! To recap, as soon as the user naviates to `http://.../stats/users`, the routing engine
-will the users `users()` method. The `users()` method will in turn call our model called `users_model` and retrieve the number of 
-members in ATECX and return it to the controller. The controller, will then build the view  called `stats_view` and attach the 
+And that's all there is to it! To recap, as soon as the user navigates to `http://.../stats/users`, the routing engine
+will call the `users()` method. The `users()` method will in turn call our model called `users_model`, retrieve the number of 
+members in ATECX, and finally return it to the controller. The controller will then build the view we called `stats_view` and attach the 
 content retrieved from the model to be displayed to the user.  
+
+
 
 
 ###Resources
