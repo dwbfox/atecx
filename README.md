@@ -159,9 +159,9 @@ from the controller we created. Create a file called `status_view.php` under `ap
 ```php 
 $this->load->view('status_view',$content);
 ```
-When this is called, Codeigniter will automatically search for a file called `status_vew` in `application/views/`. Expect to run into errors if you neglect to maintain a consistent name the view and the controller. You'll also want to create `css` and `js` files named `stats` and put them under the `/assets/js` and `/assets/css` folders respectively. They'll be automatically attached to the header and footer as our controller builds the view.
+When this is called, Codeigniter will automatically search for a file called `status_vew` in `application/views/`. Expect to run into errors if you neglect to maintain a consistent name between the view and the controller. You'll also want to create `css` and `js` files named `stats` and put them under the `/assets/js` and `/assets/css` folders respectively. They'll be automatically attached to the header and footer as our controller builds the view.
 
-Back on `status_view.php`, we'll add some required HTML markup:
+Back to `status_view.php`, we'll add some required HTML markup:
 ```HTML
 <div id="content">
 	<div class="content">
@@ -180,7 +180,16 @@ All of the views in ATECX begin with the format above. All of the method specifi
 </div>
 ```
 
+And that's all there is to it! To recap, as soon as the user naviates to `http://.../stats/users`, the routing engine
+will the users `users()` method. The `users()` method will in turn call our model called `users_model` and retrieve the number of 
+members in ATECX and return it to the controller. The controller, will then build the view  called `stats_view` and attach the 
+content retrieved from the model to be displayed to the user.  
 
+
+###Resources
+http://codeigniter.com/user_guide/general/models.html
+http://codeigniter.com/user_guide/general/urls.html
+http://codeigniter.com/user_guide/general/controllers.html
 
 ## Upgrading Codeigniter
 Codeigniter's modular nature allows it to be upgraded without affecting the user application. The core
